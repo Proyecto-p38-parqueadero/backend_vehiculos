@@ -1,4 +1,4 @@
-package models;
+package com.misiontic.vehiculo_ms.models;
 
 import org.springframework.data.annotation.Id;
 
@@ -12,10 +12,11 @@ public class vehiculo {
     private String propietario;
 
     public vehiculo(String placa, Date fecha_ingreso,String propietario){
-        this.placa= placa;
-        this.fecha_ingreso = fecha_ingreso;
-        this.propietario = propietario;
+        this.setPlaca(placa);
+        this.setFecha_ingreso(fecha_ingreso);
+        this.setPropietario(propietario);
     }
+
 
     public String getPlaca() {
         return placa;

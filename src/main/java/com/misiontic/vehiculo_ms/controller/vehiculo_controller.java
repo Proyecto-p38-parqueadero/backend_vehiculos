@@ -1,9 +1,9 @@
-package controller;
-import exceptions.ExepcionNotFound;
-import models.vehiculo;
-import repository.vehiculo_repository;
+package com.misiontic.vehiculo_ms.controller;
+import com.misiontic.vehiculo_ms.exceptions.ExepcionNotFound;
+import com.misiontic.vehiculo_ms.models.vehiculo;
+import com.misiontic.vehiculo_ms.repository.vehiculo_repository;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
+
 @RestController
 
 public class vehiculo_controller {
@@ -14,7 +14,7 @@ public class vehiculo_controller {
     }
     @GetMapping("/vehiculo/{placa}")
     vehiculo getvehiculo(@PathVariable String placa){
-        return (vehiculo) Vehiculo_repository.findBy(placa) .orElseThrow(() -> new ExepcionNotFound( "no se encontro vehiculo"+ placa));
+        return (vehiculo) Vehiculo_repository.findById(placa) .orElseThrow(() -> new ExepcionNotFound( "no se encontro vehiculo"+ placa));
 
     }
     @PostMapping("/vehiculo")
