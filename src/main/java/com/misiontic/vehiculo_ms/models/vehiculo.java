@@ -12,33 +12,33 @@ public class vehiculo {
     private String propietario;
 
     public vehiculo(String placa, Date fecha_ingreso,String propietario){
-        this.setPlaca(placa);
-        this.setFecha_ingreso(fecha_ingreso);
-        this.setPropietario(propietario);
+        this.placa = placa;
+        this.fecha_ingreso = fecha_ingreso;
+        this.propietario =propietario;
     }
 
 
-    public String getPlaca() {
+    public String getplaca() {
         return placa;
     }
 
-    public void setPlaca(String placa) {
+    public void setplaca(String placa) {
         this.placa = placa;
     }
 
-    public Date getFecha_ingreso() {
+    public Date getfecha_ingreso() {
         return fecha_ingreso;
     }
 
-    public void setFecha_ingreso(Date fecha_ingreso) {
+    public void setfecha_ingreso(Date fecha_ingreso) {
         this.fecha_ingreso = fecha_ingreso;
     }
 
-    public String getPropietario() {
+    public String getpropietario() {
         return propietario;
     }
 
-    public void setPropietario(String propietario) {
+    public void setpropietario(String propietario) {
         this.propietario = propietario;
     }
 }
