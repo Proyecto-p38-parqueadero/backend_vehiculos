@@ -57,14 +57,13 @@ public class vehiculo_controller {
     }
 
     @GetMapping("/vehiculo/all/{placa}")
-    List<vehiculo> getallvehiculo(@PathVariable String placa) {
+    vehiculo getonevehiculo(@PathVariable String placa) {
         vehiculo Vehiculo = Vehiculo_repository.findById(placa).orElse(null);
         if (Vehiculo == null) {
             throw new ExepcionNotFound("el vehiculo no existe");
 
         }
-        List<vehiculo> vehiculo = Vehiculo_repository.findAll();
-        return vehiculo;
+        return Vehiculo;
 
     }
 }
